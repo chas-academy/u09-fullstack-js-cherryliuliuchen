@@ -1,43 +1,49 @@
 const axios = require('axios');
 const logger = require('../logs/nutrientsLogger');  
 const Food = require('../models/Food'); 
+const config = require('../config/config');
 
+// Get food nutrients
 exports.getFoodDetail = async (req, res) => {
   const { fdcId } = req.params;
   try {
-    // First, try to get the data from db
+    // Search data from DB
     const food = await Food.findOne({ fdcId });
 
     if (food) {
-      logger.info(`Data for fdcId ${fdcId} fetched from the database.`);  
+      logger.info(`Get the data with  ${fdcId} from DB.`);
       return res.json(food);
     }
 
-    // If can not get data from db, send request to usda api.
-    const response = await axios.get(`https://api.nal.usda.gov/fdc/v1/food/${fdcId}`, {
+    // If can not find data in DB, send request to USDA.
+    const response = await axios.get(`${config.USDA_API_BASE_URL}food/${fdcId}`, {
       params: {
         api_key: process.env.USDA_API_KEY
       }
     });
 
+    // Printe the api response
+    console.log(response.data);
+
+    // Create foodDetail, it will help to save to DB
     const foodDetail = {
-      fdcId: response.data.fdcId,
-      description: response.data.description,
+      fdcId: response.data.fdcId || fdcId,  // If API do not response fdcId, use the fdcId in request.
+      description: response.data.description || 'No description',
       foodNutrients: response.data.foodNutrients.map(nutrient => ({
-        nutrientName: nutrient.nutrient?.name || 'Unknown Nutrient',
-        value: nutrient.amount !== undefined ? nutrient.amount : 0
+        nutrientName: nutrient.nutrient.name,  
+        value: nutrient.amount || 0  // Default amout is 0.
       }))
     };
 
-    logger.info(`Data for fdcId ${fdcId} fetched from the API.`);  // 将日志写入文件
+    logger.info(`Get nutrients data from API which fdcId  ${fdcId} .`);
 
-    // Save the data to db
+    // Save the new data to DB
     const newFood = new Food(foodDetail);
     await newFood.save();
 
     res.json(foodDetail);
   } catch (err) {
-    logger.error(`Error occurred while fetching food data for fdcId ${fdcId}: ${err.message}`);
+    logger.error(`Error getting food data with fdcId ${fdcId}: ${err.message}`);
     res.status(500).send('Server error');
   }
 };

@@ -13,6 +13,7 @@ const logger = createLogger({
     }),
     format.printf(info => `${info.timestamp} ${info.level}: ${info.message}`)
   ),
+  //The way that we can see the log. We can see it both in logs/app.log and console.
   transports: [
     new transports.File({ filename: logFile }),
     new transports.Console() 

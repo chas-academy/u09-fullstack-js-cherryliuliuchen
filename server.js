@@ -1,35 +1,38 @@
-// server.js
 const express = require('express');
-const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv').config();
+const connectDB = require('./config/db');
 const logger = require('./logs/logger');
+
+// Import route
+const myFoodRoutes = require('./routes/myFoodRoutes');
+const userRoutes = require('./routes/userRoutes');
+const foodRoutes = require('./routes/foodRoutes'); 
 
 const app = express();
 
-// Mddware
-app.use(cors());//Cross-domain resource sharing
-app.use(express.json());
-
-// Software connection
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+// Connect to DB
+connectDB()
   .then(() => logger.info('MongoDB connected'))
-  .catch(err => logger.error(err));
+  .catch(err => logger.error('MongoDB connection error:', err));
 
-// Routes
-const foodRoutes = require('./routes/foodRoutes'); 
-const userRoutes = require('./routes/userRoutes'); 
+// Middleware
+app.use(cors()); // Handle cross-domain issues
+app.use(express.json()); // Parse JSON data
 
-app.use('/api/food', foodRoutes);
+// Define routes
+app.use('/api/myfood', myFoodRoutes);
 app.use('/api/user', userRoutes);
+app.use('/api/food', foodRoutes);
 
+// Root Route
 app.get('/', (req, res) => {
   res.send('Server is running');
 });
 
-// Error handling middware
+// Error handling middleware
 app.use((err, req, res, next) => {
-  logger.error('Unexpected error:', err.stack); 
+  logger.error(`Unexpected error: ${err.message}`, err.stack); 
   res.status(500).send('Something broke!');
 });
 

@@ -1,13 +1,15 @@
 const mongoose = require('mongoose');
+const logger = require('../logs/logger');
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URI, {
-
+    const conn = await mongoose.connect('mongodb+srv://cherryliuliuchen:chen12345678@foodcluster.hwhxn.mongodb.net/Foodcluster?retryWrites=true&w=majority', {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
     });
-    console.log('MongoDB connected');
+    logger.info(`MongoDB Connected: ${conn.connection.host}`);
   } catch (err) {
-    console.error(err.message);
+    logger.error(`Error: ${err.message}`);
     process.exit(1);
   }
 };
