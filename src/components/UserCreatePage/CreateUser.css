@@ -1,0 +1,25 @@
+/* src/components/UserCreatePage/CreateUser.css */
+.create-user {
+  max-width: 700px; 
+  width: 100%;
+  padding: 30px; 
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
+}
+
+.create-user h2 {
+  font-size: 2rem; /* Large title font */
+  margin-bottom: 20px;
+}
+
+.create-user .form-control {
+  font-size: 1.2rem; 
+  padding: 10px; 
+}
+
+.create-user .btn {
+  font-size: 1.2rem; 
+  padding: 10px 20px;
+}
