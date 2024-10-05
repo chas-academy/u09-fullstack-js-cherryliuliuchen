@@ -69,3 +69,36 @@
 2024-09-27 17:13:34 info: Server running on port 5000
 2024-09-27 17:13:34 info: MongoDB Connected: foodcluster-shard-00-01.hwhxn.mongodb.net
 2024-09-27 17:13:34 info: MongoDB connected
+2024-09-30 15:48:15 info: Server running on port 5000
+2024-09-30 15:48:15 info: MongoDB Connected: foodcluster-shard-00-01.hwhxn.mongodb.net
+2024-09-30 15:48:15 info: MongoDB connected
+2024-10-01 16:29:27 info: Server running on port 5000
+2024-10-01 16:29:28 info: MongoDB Connected: foodcluster-shard-00-01.hwhxn.mongodb.net
+2024-10-01 16:29:28 info: MongoDB connected
+2024-10-02 10:24:01 info: Server running on port 5000
+2024-10-02 10:24:02 info: MongoDB Connected: foodcluster-shard-00-00.hwhxn.mongodb.net
+2024-10-02 10:24:02 info: MongoDB connected
+2024-10-03 15:15:07 info: Server running on port 5000
+2024-10-03 15:15:08 info: MongoDB Connected: foodcluster-shard-00-02.hwhxn.mongodb.net
+2024-10-03 15:15:08 info: MongoDB connected
+2024-10-03 15:20:01 info: Server running on port 5000
+2024-10-03 15:20:01 info: MongoDB Connected: foodcluster-shard-00-00.hwhxn.mongodb.net
+2024-10-03 15:20:01 info: MongoDB connected
+2024-10-03 15:21:30 info: Server running on port 5000
+2024-10-03 15:21:30 info: MongoDB Connected: foodcluster-shard-00-02.hwhxn.mongodb.net
+2024-10-03 15:21:30 info: MongoDB connected
+2024-10-03 15:24:46 info: Server running on port 5000
+2024-10-03 15:24:47 info: MongoDB Connected: foodcluster-shard-00-01.hwhxn.mongodb.net
+2024-10-03 15:24:47 info: MongoDB connected
+2024-10-03 15:25:45 info: Server running on port 5000
+2024-10-03 15:25:46 info: MongoDB Connected: foodcluster-shard-00-02.hwhxn.mongodb.net
+2024-10-03 15:25:46 info: MongoDB connected
+2024-10-03 15:32:31 info: Server running on port 5000
+2024-10-03 15:32:31 info: MongoDB Connected: foodcluster-shard-00-02.hwhxn.mongodb.net
+2024-10-03 15:32:31 info: MongoDB connected
+2024-10-03 15:33:40 info: Server running on port 5000
+2024-10-03 15:33:40 info: MongoDB Connected: foodcluster-shard-00-00.hwhxn.mongodb.net
+2024-10-03 15:33:40 info: MongoDB connected
+2024-10-03 15:35:09 info: Server running on port 5000
+2024-10-03 15:35:10 info: MongoDB Connected: foodcluster-shard-00-01.hwhxn.mongodb.net
+2024-10-03 15:35:10 info: MongoDB connected

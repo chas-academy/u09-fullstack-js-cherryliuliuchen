@@ -1,13 +1,13 @@
 const mongoose = require('mongoose');
 
-// 创建食物模型
+// Create the food model
 const FoodSchema = new mongoose.Schema({
   fdcId: { type: String, required: true, unique: true },
   description: { type: String, required: true },
   foodNutrients: [
     {
       nutrientName: { type: String, required: true },
-      value: { type: Number, default: 0 }  // 默认值设置为 0
+      value: { type: Number, default: 0 }  // Default value is 0.
     }
   ]
 });

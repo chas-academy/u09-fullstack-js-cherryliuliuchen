@@ -121,7 +121,7 @@ exports.adminCreateUser = async (req, res) => {
       name,
       email,
       password, 
-      isActive: isActive !== undefined ? isActive : true, // 默认激活
+      isActive: isActive !== undefined ? isActive : true, // Default is active
       isAdmin: false 
     });
 
