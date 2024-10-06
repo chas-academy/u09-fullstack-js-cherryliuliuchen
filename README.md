@@ -1,6 +1,21 @@
-<<<<<<< HEAD
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/k7YdU7jd)
-=======
+# Technical Project Description for tastetime APP - admin system
+> The admin system of the food nutrition analysis application is a standalone web-based tool developed using React, Bootstrap, and TypeScript. The separation of the admin system into its own entry point allows for easier scalability and future feature expansion. This modular approach ensures that as new administrative functions are needed, they can be seamlessly integrated without disrupting the core functionality of the user-facing application. Additionally, using TypeScript improves code maintainability, making it easier to identify potential bugs and implement new features. The admin system’s primary functions include creating new users, modifying user email and password, and marking users as inactive.
+
+
+## Table of Contents
+- [User-interactive Features](#features)
+- [Getting Started with Create React App](#getting-started-with-create-react-app)
+
+## User-interactive Features
+### Create new user
+![alt text](./public/assets/create.jpg)
+
+### User management
+![alt text](./public/assets/management.jpg)
+
+## Getting Started with Create React App
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -47,4 +62,3 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
->>>>>>> 80a974c (Initialize project using Create React App)
