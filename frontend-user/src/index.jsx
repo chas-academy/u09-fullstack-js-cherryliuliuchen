@@ -4,7 +4,7 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
-
+// import { HashRouter as Router } from 'react-router-dom';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 const container = document.getElementById('root');

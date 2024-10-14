@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
+// import { Routes, Route, HashRouter as Router } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import SearchResultPage from './pages/SearchResultPage';
 import FoodDetailPage from './pages/FoodDetailPage';
