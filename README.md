@@ -11,6 +11,10 @@ The FoodNutrients App is a full stack web-based food nutrition analysis applicat
 - [User Frontend](./frontend-user/README.md): The user interface for searching and viewing food nutrition information.
 - [Prototype](./prototyp): Design prototypes and mockups for the application.
 - [API Documentation](./API%20doc/Food.collection.md): Documentation for the API endpoints used in the project.
+- [User study](https://docs.google.com/document/d/1oOeuQITudd00YtIYjwWQGVC02qluG4sr1RGhd1CtHa0/edit?tab=t.0#heading=h.r22hti5u1dcc): Documentation for user study.
+- [Personas](https://docs.google.com/document/d/1TUmLdA2-ahI3RpaooEl9RyN9UJjH_9JM4ZnvDSsujU0/edit?tab=t.0#heading=h.phpkib44jotz): Documentation for personas.
+- [Stories](https://docs.google.com/document/d/1iRcaE1nvr4rzVz-4mSyT67imjsaybaYW3apk47ZvSwQ/edit?tab=t.0#heading=h.jss5kzy9ce5): Documentation for stories.
+
 
 ## Features
 
