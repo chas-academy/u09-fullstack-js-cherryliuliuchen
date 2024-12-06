@@ -3,10 +3,7 @@ const logger = require('../logs/logger');
 
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect('mongodb+srv://cherryliuliuchen:chen12345678@foodcluster.hwhxn.mongodb.net/Foodcluster?retryWrites=true&w=majority', {
-      useNewUrlParser: true,
-      useUnifiedTopology: true
-    });
+    const conn = await mongoose.connect('mongodb+srv://cherryliuliuchen:chen12345678@foodcluster.hwhxn.mongodb.net/Foodcluster?retryWrites=true&w=majority');
     logger.info(`MongoDB Connected: ${conn.connection.host}`);
   } catch (err) {
     logger.error(`Error: ${err.message}`);
