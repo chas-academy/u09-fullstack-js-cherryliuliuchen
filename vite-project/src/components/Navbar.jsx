@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
-import { Link } from 'react-router-dom'; // 使用react-router-dom中的Link组件
+import { Link } from 'react-router-dom';
 
 const MyNavbar = ({ loggedIn }) => {
   return (
