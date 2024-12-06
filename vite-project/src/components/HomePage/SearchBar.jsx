@@ -1,27 +1,34 @@
 import React, { useState } from 'react';
-import './SearchBar.css';
+import { useNavigate } from 'react-router-dom';
+import { Form } from 'react-bootstrap'; 
+import './SearchBar.css'; 
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = () => {
   const [query, setQuery] = useState('');
+  const navigate = useNavigate();
 
-  const handleInputChange = (e) => {
-    setQuery(e.target.value);
-  };
-
-  const handleSearch = () => {
-    onSearch(query);
+  const handleSearch = (e) => {
+    e.preventDefault(); // Prevent form to submit defaultly
+    if (query.trim()) {
+      navigate(`/search?query=${query}`);
+    }
   };
 
   return (
-    <div className="search-bar">
-      <input
-        type="text"
-        value={query}
-        onChange={handleInputChange}
-        placeholder="Search for foods..."
-      />
-      <button onClick={handleSearch}>Search</button>
-    </div>
+    <Form onSubmit={handleSearch} className="search-bar-form">
+      <Form.Group className="text-center">
+        <Form.Control
+          type="text"
+          placeholder="Search for food"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          className="search-input" // Custom class for controlling input box width
+        />
+      </Form.Group>
+      <div className="text-center">
+        <button type="submit">Search</button> {/* Submit with form */}
+      </div>
+    </Form>
   );
 };
 

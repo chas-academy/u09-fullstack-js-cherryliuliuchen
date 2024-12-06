@@ -1,26 +1,25 @@
-/* SearchBar.css */
-.search-bar {
-    margin: 20px auto;
-    max-width: 600px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .search-bar input {
-    flex: 1;
-    padding: 10px;
-    font-size: 16px;
-  }
-  
-  .search-bar button {
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .search-bar button:hover {
-    background-color: #0056b3;
-  }
-  
+/* The search box is centered, 
+the width is appropriately adjusted, 
+and the height is the same as the button */
+.search-input {
+  width: 200%; 
+  max-width: 2000px; 
+  margin: 0 auto; 
+  margin-bottom: 2rem; 
+  height: 48px; 
+  padding: 10px 15px; 
+  box-sizing: border-box; /* Make sure padding does not affect width calculations */
+  font-size: 1.25rem; 
+  position: relative;
+  left: 50%; /* Position the input box to 50% of the parent container */
+  transform: translateX(-50%); /* Move the input box to center it */
+}
+
+
+/* Form is centered */
+.search-bar-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: aquamarine;
+}

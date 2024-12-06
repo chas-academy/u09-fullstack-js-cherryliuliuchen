@@ -1,12 +1,14 @@
 import React from 'react';
+import SearchBar from '../components/HomePage/SearchBar'; 
 
-function HomePage() {
+const HomePage = () => {
+  console.log("HomePage is rendering");
   return (
-    <div>
-      <h1>Homepage</h1>
-      <p>Welcome to the Food Explorer homepage. Chen Liu</p>
+    <div className="container mt-5 text-center"> {/* Center content */}
+      <h1 className="mb-4">Search for your favorite food below</h1> 
+      <SearchBar />
     </div>
   );
-}
+};
 
 export default HomePage;

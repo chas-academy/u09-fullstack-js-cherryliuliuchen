@@ -1,0 +1,13 @@
+/* Set the background color of the selected state */
+.selected {
+    background-color: #eadece; /* selected color */
+    color: white; /* Text color is white */
+  }
+  
+  /* Set the background color of the unselected state */
+  .unselected {
+    background-color: #f8f9fa; 
+    color: black; 
+  }
+  
+  

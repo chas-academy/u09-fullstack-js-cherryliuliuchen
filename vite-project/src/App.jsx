@@ -1,31 +1,22 @@
 import React from 'react';
-import { Route, Routes, Link } from 'react-router-dom';
+import MyNavbar from './components/Navbar';
+import { Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import MyFoodPage from './pages/MyFoodPage';
 import AccountPage from './pages/AccountPage';
-import FoodDetailPage from './pages/FoodDetailPage';
-import SearchResultPage from './pages/SearchResultPage';
+import MyInformationPage from './pages/MyInformationPage';
 
 function App() {
   return (
-    <div>
-      <nav>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/myfood">My Food</Link></li>
-          <li><Link to="/account">Account</Link></li>
-          <li><Link to="/food-detail">Food Detail</Link></li>
-          <li><Link to="/search-result">Search Result</Link></li>
-        </ul>
-      </nav>
+    <>
+      <MyNavbar loggedIn={true} />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/myfood" element={<MyFoodPage />} />
+        <Route path="/my-food" element={<MyFoodPage />} />
         <Route path="/account" element={<AccountPage />} />
-        <Route path="/food-detail" element={<FoodDetailPage />} />
-        <Route path="/search-result" element={<SearchResultPage />} />
+        <Route path="/my-information" element={<MyInformationPage />} />
       </Routes>
-    </div>
+    </>
   );
 }
 

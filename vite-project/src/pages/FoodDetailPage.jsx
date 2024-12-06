@@ -1,12 +1,12 @@
 import React from 'react';
+import FoodDetail from '../components/FoodDetailPage/FoodDetail';
 
-function FoodDetailPage() {
+const FoodDetailPage = () => {
   return (
-    <div>
-      <h1>Food Detail Page</h1>
-      <p>Detailed information about selected food.</p>
+    <div className="container mt-5">
+      <FoodDetail />
     </div>
   );
-}
+};
 
 export default FoodDetailPage;
