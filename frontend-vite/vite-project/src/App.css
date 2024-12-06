@@ -1,0 +1,172 @@
+/* Ensure that the content area fills at least the entire screen height */
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* General styles for body, headings, and other elements */
+body, h1, h2, h3, h4, h5, h6, p, a, nav, footer {
+  color: #3f302c; 
+  background-color: #fbfaf8; 
+}
+
+/* Button styles */
+button {
+  background-color: #febe98; 
+  border: none; 
+  padding: 10px 20px; 
+  height: 48px; 
+  font-size: 1.25rem; 
+  display: inline-block;
+  border-radius: 8px; 
+}
+
+/* Slightly darker background when the button is hovered */
+button:hover {
+  background-color: #fda77b;
+}
+
+/* Flexbox layout for responsiveness */
+.d-flex {
+  display: flex !important;
+}
+
+/* Adjust container to fit mobile devices better */
+.container {
+  max-width: 100% !important;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom Navbar styles */
+.custom-navbar {
+  background-color: #efcfba !important;
+  color: #3f302c !important; 
+}
+
+/* Navbar links */
+.custom-navbar .nav-link {
+  color: #3f302c !important;
+}
+
+/* Navbar brand */
+.custom-navbar .navbar-brand {
+  color: #3f302c !important;
+  background-color: transparent !important; 
+  border: none !important; 
+}
+
+/* Custom Footer styles */
+.custom-footer {
+  background-color: #efcfba;
+  color: #3f302c; 
+  padding: 1rem 0; 
+  text-align: center; 
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: auto;
+}
+
+/* Footer paragraph */
+.custom-footer p {
+  margin: 0;
+  background-color: #efcfba; 
+  padding: 0; 
+  border: none; 
+}
+
+/* Link styles */
+a {
+  color: #3f302c; 
+  background-color: transparent; 
+  text-decoration: none; /* Remove default underline */
+}
+
+/* Hover effect for links */
+a:hover {
+  color: #85694a; 
+  background-color: transparent; 
+}
+
+/* Active state for links */
+a:active {
+  background-color: transparent; 
+}
+
+/* App component styles */
+.App {
+  text-align: center;
+}
+
+/* App logo styling */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+/* Logo spin animation for users who do not prefer reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* App header styles */
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+/* Link inside App component */
+.App-link {
+  color: #61dafb;
+}
+
+/* Keyframes for logo spin animation */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Ensure Footer doesn't block content on small screens */
+@media (max-width: 768px) {
+  .custom-footer {
+    position: relative;
+    padding: 10px;
+  }
+
+  /* Adjust search input width on mobile devices */
+  .search-input {
+    width: 100%; /* Full width on small screens */
+    max-width: 100%;
+    left: 0;
+    transform: none;
+  }
+
+  /* Make button responsive for mobile */
+  button {
+    width: 100%; 
+    height: 40px; 
+    font-size: 1rem;
+  }
+
+  /* Ensure form is centered on mobile */
+  .search-bar-form {
+    flex-direction: column;
+    align-items: center;
+  }
+}
